@@ -1,0 +1,5 @@
+<!--miniprogram/pages/scan/scan.wxml-->
+<view class="container">
+  <text class="description">{{description}}</text>
+  <image class="qrcode" bindtap="click" src="{{url}}"></image>
+</view>

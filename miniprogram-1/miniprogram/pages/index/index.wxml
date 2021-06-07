@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container">
+  <!--主要展示-->
+  <scroll-view class="display" scroll-x="true">
+    <swiper autoplay="true" interval="8000" duration="1000" indicator-dots='true' circular="true" class="display">
+      <swiper-item>
+        <navigator url="../details/details" open-type="navigate" class="display">
+          <image bindtap="bindViewTap" class="display-block" src="{{pic1Url}}" mode="cover"></image>
+        </navigator>        
+      </swiper-item>
+      <swiper-item>
+        <navigator url="../details/details" open-type="navigate" class="display">
+          <image bindtap="bindViewTap" class="display-block" src="{{pic2Url}}" mode="cover"></image>
+        </navigator>        
+      </swiper-item>
+      <swiper-item>
+        <navigator url="../details/details" open-type="navigate" class="display">
+          <image bindtap="bindViewTap" class="display-block" src="{{pic3Url}}" mode="cover"></image>
+        </navigator>        
+      </swiper-item>
+    </swiper>
+  </scroll-view>
+  <view class="display-text">
+    <text>更多展品</text>
+  </view>
+
+  <view class="list">
+    <block wx:for="{0,1,2,3,4,5}">
+      <navigator url="../details/details" open-type="navigate" class="list-item">
+        <image bindtap="bindViewTap" class="list-item image" src="{{pic4Url}}" mode="cover"></image>
+        <view class="list-item text" style="flex-direction:column;">
+          <text>虞弘墓石椁</text>
+          <view style="flex-direction:row;margin-left:5vw">
+            <mp-icon icon="location" color="red"></mp-icon>
+            <text style="margin-left:0">2楼3号展台</text>
+          </view>
+        </view>
+      </navigator>
+      <navigator url="../details/details" open-type="navigate" class="list-item">
+        <image bindtap="bindViewTap" class="list-item image" src="{{pic5Url}}" mode="cover"></image>
+        <view class="list-item text" style="flex-direction:column;">
+          <text>赵城金藏</text>
+          <view style="flex-direction:row;margin-left:5vw">
+            <mp-icon icon="location" color="red"></mp-icon>
+            <text style="margin-left:0">3楼5号展台</text>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class='goTop' hidden='{{!floorstatus}}' bindtap="goTop">
+    <button style="width:100rpx;height:100rpx;border-radius:50%;right:10rpx;" hover-class="hover">
+      <image class="goTop" src="./top.png" bindtap="bindViewTap"></image>
+    </button>
+  </view>
+  <view class="request-text"><text>获取更多信息请刷新</text></view>
+
+  <!-- view class="button-border">
+    <button type="default" style="width:33%;font-size:30rpx;color:#cbd56c;margin-left:0;">
+      <mp-icon icon="home" color="red" size="{{25}}" style="top:0;"></mp-icon>
+      <text>首页</text>
+    </button>
+  </view -->
+
+</view>

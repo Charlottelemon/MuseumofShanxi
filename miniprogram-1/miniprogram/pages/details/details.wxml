@@ -1,0 +1,31 @@
+<!--miniprogram/pages/details/details.wxml-->
+<view class="container">
+  <view class="fullscreen" style="position: relative">
+    <image class="fullimage" src="{{item1Url}}" style="position: absolute"></image>
+    <text class="covertext" style="position:absolute;top:0vh">{{covercontent}}</text>
+
+    <view class="mask" bindtap="hideModal" animation="{{animationMask}}"></view>
+    <view class="content bottom-pos" animation="{{animationData}}">
+      <text class="title" decode="true">{{title}}</text>
+      <text class="intro" decode="true">{{introduce}}</text>
+      <text class="subtitle">相关展品</text>
+      <scroll-view class="relative-item" scroll-x="true" scroll-left="{{x}}" scroll-with-animation="true">
+        <view wx:for="{0,1,2,3}" class="item">
+          <navigator open-type="navigate" url="./details" class="item">
+            <view>
+              <image src="./item2.jpg" bindtap="bindViewTap" class="item-image" mode="aspectFill"></image>
+              <text class="item-text">佛像</text>
+            </view>
+          </navigator>    
+        </view>
+      </scroll-view>
+    </view>
+
+    <image class="coverbutton" src="{{pushUrl}}" style="position: absolute;bottom: 20rpx;left: 350rpx" bindtap="showModal">详情</image>
+    <navigator url="../index/index" open-type="switchTab" class="gohome">
+      <button style="width:80rpx;height:80rpx;border-radius:50%;right:10rpx;bottom:10rpx;" hover-class="hover">
+        <mp-icon icon="home" size="{{30}}" color="white" bindtap="bindViewTap" class="gohome"></mp-icon>
+      </button>
+    </navigator>
+  </view>
+</view>

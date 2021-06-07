@@ -1,0 +1,6 @@
+<!--miniprogram/pages/guide/guide.wxml-->
+<view class="container">
+  <view class="fullscreen" style="position: relative">
+    <image class="fullimage" src="{{mapUrl}}" style="position: absolute"></image>
+  </view>
+</view>

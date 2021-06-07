@@ -1,0 +1,19 @@
+/* miniprogram/pages/scan.wxss */
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+
+.qrcode {
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.description {
+  font-size: 0.7em
+}
