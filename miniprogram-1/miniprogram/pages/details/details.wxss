@@ -36,7 +36,7 @@ page {
   z-index: 4;
 }
 
-.gohome{
+.gohome,.tomap{
   height: 80rpx;
   width: 80rpx;
   position: fixed;
@@ -49,8 +49,12 @@ page {
   z-index: 4;
 }
 
+.tomap{
+  bottom: 50vh;
+}
+
 .hover{
-  background-color: rgba(77, 39, 216, 0.575);
+  background-color: grey;
   box-shadow: silver;
   border-radius: 50%;
   align-items: center;

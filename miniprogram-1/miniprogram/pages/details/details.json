@@ -1,5 +1,6 @@
 {
   "usingComponents": {},
   "onReachBottomDistance": 100,
-  "disableScroll": true
+  "disableScroll": true,
+  "navigationBarTitleText": "展品详情"
 }

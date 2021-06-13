@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/scan/scan",
     "pages/guide/guide",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/location/location"
   ],
   "window": {
     "backgroundColor": "#f6f6f6",
@@ -14,7 +15,7 @@
   },
   "tabBar": {
     "color": "#000000",
-    "selectedColor": "#e09077",
+    "selectedColor": "#22ad83",
     "list": [
       {
         "iconPath": "images/home.png",

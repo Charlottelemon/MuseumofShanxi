@@ -9,6 +9,7 @@ Page({
     pic3Url: './display3.jpg',
     pic4Url: './display4.jpg',
     pic5Url: './display5.jpg',
+    pic6Url: './display6.jpg',
     userInfo: {},
     hasUserInfo: false,
     logged: false,
@@ -40,7 +41,7 @@ Page({
     }
   },
   
-  onLoad: function() {
+  onLoad: function(options) {
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',

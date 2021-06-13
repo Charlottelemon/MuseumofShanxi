@@ -7,13 +7,17 @@
   flex-direction:column;
   align-items:center;/*垂直居中*/
   justify-content: center;/*水平居中*/
+  background-color: seashell;
 }
 
 .qrcode {
   height: 300rpx;
   width: 300rpx;
+  border: cadetblue;
+  border-style: dashed;
 }
 
 .description {
-  font-size: 0.7em
+  font-size: 1.0em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

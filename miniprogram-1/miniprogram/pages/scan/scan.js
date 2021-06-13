@@ -5,15 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url: './scan.png',
+    url: './scan.jpg',
     description: '点击扫描展品二维码'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function() {
+    // wx.hideToast() // 隐藏Toast
   },
 
   /**
@@ -69,9 +69,16 @@ Page({
     var that = this;
     wx.scanCode({
       success: (res) => {
-        wx.navigateTo({
-          url: '../'+res.result,
+        wx.showToast({ // 显示Toast
+          title: '扫码成功',
+          icon: 'success',
+          duration: 1500
         })
+        setTimeout(function(){
+          wx.navigateTo({
+            url: '../'+res.result,
+          })
+        },1500);
       }
     })
   }

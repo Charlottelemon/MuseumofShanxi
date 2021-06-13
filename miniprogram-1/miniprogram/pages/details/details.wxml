@@ -1,23 +1,35 @@
 <!--miniprogram/pages/details/details.wxml-->
 <view class="container">
   <view class="fullscreen" style="position: relative">
-    <image class="fullimage" src="{{item1Url}}" style="position: absolute"></image>
-    <text class="covertext" style="position:absolute;top:0vh">{{covercontent}}</text>
+    <image class="fullimage" src="{{itemlist[index].url}}" style="position: absolute"></image>
+    <text class="covertext" style="position:absolute;top:0vh">{{covercontent[index].title}}</text>
 
     <view class="mask" bindtap="hideModal" animation="{{animationMask}}"></view>
     <view class="content bottom-pos" animation="{{animationData}}">
-      <text class="title" decode="true">{{title}}</text>
+      <text class="title" decode="true">{{covercontent[index].title}}</text>
       <text class="intro" decode="true">{{introduce}}</text>
       <text class="subtitle">相关展品</text>
       <scroll-view class="relative-item" scroll-x="true" scroll-left="{{x}}" scroll-with-animation="true">
-        <view wx:for="{0,1,2,3}" class="item">
-          <navigator open-type="navigate" url="./details" class="item">
+        <block wx:for="{3}" class="item">
+          <navigator open-type="navigate" url="./details?index=6" class="item">
             <view>
-              <image src="./item2.jpg" bindtap="bindViewTap" class="item-image" mode="aspectFill"></image>
-              <text class="item-text">佛像</text>
+              <image src="../index/display7.jpg" bindtap="bindViewTap" class="item-image" mode="aspectFill"></image>
+              <text class="item-text">{{covercontent[6].title}}</text>
+            </view>
+          </navigator>
+          <navigator open-type="navigate" url="./details?index=2" class="item">
+            <view>
+              <image src="../index/display2.jpg" bindtap="bindViewTap" class="item-image" mode="aspectFill"></image>
+              <text class="item-text">{{covercontent[2].title}}</text>
+            </view>
+          </navigator>
+          <navigator open-type="navigate" url="./details?index=3" class="item">
+            <view>
+              <image src="../index/display3.jpg" bindtap="bindViewTap" class="item-image" mode="aspectFill"></image>
+              <text class="item-text">{{covercontent[3].title}}</text>
             </view>
           </navigator>    
-        </view>
+        </block>
       </scroll-view>
     </view>
 
@@ -25,6 +37,11 @@
     <navigator url="../index/index" open-type="switchTab" class="gohome">
       <button style="width:80rpx;height:80rpx;border-radius:50%;right:10rpx;bottom:10rpx;" hover-class="hover">
         <mp-icon icon="home" size="{{30}}" color="white" bindtap="bindViewTap" class="gohome"></mp-icon>
+      </button>
+    </navigator>
+    <navigator url="../location/location" open-type="navigate" class="tomap">
+      <button style="width:80rpx;height:80rpx;border-radius:50%;right:10rpx;bottom:10rpx;" hover-class="hover">
+        <mp-icon icon="location" size="{{30}}" color="white" bindtap="bindViewTap" class="tomap"></mp-icon>
       </button>
     </navigator>
   </view>

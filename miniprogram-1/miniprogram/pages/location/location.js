@@ -1,11 +1,11 @@
-// pages/deployFunctions/deployFunctions.js
+// miniprogram/pages/location/location.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    localUrl1: './3f.png'
   },
 
   /**

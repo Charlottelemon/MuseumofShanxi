@@ -1,0 +1,10 @@
+<!--miniprogram/pages/location/location.wxml-->
+<view class="container">
+  <image class="location" src="{{localUrl1}}"></image>
+  <text class="intext" decode="true">当前展品位于\n3F --- 名族熔炉</text>
+  <navigator url="../index/index" open-type="switchTab" class="home">
+      <button style="width:100vw;height:10vh;right:0rpx;bottom:0rpx;" hover-class="hover">
+        <mp-icon icon="home" size="{{35}}" color="white"></mp-icon>
+      </button>
+    </navigator>
+</view>

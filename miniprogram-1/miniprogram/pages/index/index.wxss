@@ -27,7 +27,7 @@ page {
 }
 
 .hover{
-  background-color: rgba(0, 0, 255, 0.24);
+  background-color: grey;
   box-shadow: none;
   border-radius: 50%;
 }
